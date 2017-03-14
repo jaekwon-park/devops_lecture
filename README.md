@@ -8,7 +8,7 @@ cat << EOF >>  ~/.bash_profile
 alias ll='ls -lai'
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export TERM="xterm-color" 
+export TERM="xterm-color"
 export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;34m\]\w\[\e[0m\]\$ '
 EOF
 
@@ -39,7 +39,7 @@ cat ~/.ssh/id_rsa.pub
 cat ~/.ssh/id_rsa.pub
 ```
 
-* Paste the public-key to here 
+* Paste the public-key to here
     * https://github.com/settings/profile
     * SSH and GPG keys > SSH keys > "New SSH Key"
 
@@ -48,7 +48,7 @@ cat ~/.ssh/id_rsa.pub
 ### Vagrant: http://vagrant.io
 #### How to install and use
 * Download & install
-    * https://www.vagrantup.com/downloads.html 
+    * https://www.vagrantup.com/downloads.html
 
 
 ### docker-compose: https://docs.docker.com/compose/install
@@ -122,7 +122,7 @@ git push -u origin master
 
 ### Docker Cli-dashboard: https://github.com/goody80/docker_cli_dashboard
 #### How to install and use
-* Install 
+* Install
 ```sh
 curl -sL bit.ly/ralf_dcs -o ./dcs
 sudo chmod 755 ./dcs
@@ -137,6 +137,7 @@ sudo mv ./dcs /usr/bin/dcs
 ```sh
 git clone https://github.com/goody80/vagrant_docker_cluster.git
 cd vagrant_docker_cluster
+vagrant box add ubuntu1404 https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box
 vagrant up docker01.dev
 vagrant ssh docker01.dev
 ```
@@ -152,4 +153,3 @@ git clone https://github.com/goody80/vagrant_rancher_cluster.git
 cd vagrant_rancher_cluster
 vagrant up rancher && vagrant up vmhost01  && vagrant up vmhost02
 ```
-
